@@ -10,8 +10,6 @@ function App() {
     <div className="App">
       <Header />
         <div className="main-container">
-          <Sidebar />
-          <Panel /> 
           <Panel />
         </div>
     </div>

@@ -1,0 +1,10 @@
+.form-container {
+  background-color: lightgray;
+  border: lightgray 2px solid;
+  border-radius: 5px;
+  min-width: 20vw;
+  min-height: 20vw;
+  height: 20vw;
+  width: 20vw;
+  margin: 10px;
+}

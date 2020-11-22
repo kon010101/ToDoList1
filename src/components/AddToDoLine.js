@@ -38,7 +38,7 @@ function AddToDoLine({ todos, setTodos }) {
               <button onClick={handleClickAdd}>add</button>
               <button  onClick={() => setShowForm(false)}>X</button>
             </> : ''}
-            {!showForm ? <button onClick={handleClickForm}>plus</button> : ''}
+            {!showForm ? <button className="btn-add-todo" onClick={handleClickForm}>plus</button> : ''}
         </div>
     );
 }

@@ -1,0 +1,32 @@
+.todo-list-container {
+  border: indianred 2px solid;
+  min-width: 200px;
+  min-height: 200px;
+  /* height: 20vw; */
+  width: 20vw;
+  padding: 10px 20px;
+  margin: 10px;
+  position: relative;
+}
+
+.close {
+  border: black 2px solid;
+  border-radius: 5px;
+  margin-top: -10px;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 5px;
+  top: 15px;
+  cursor: pointer;
+}
+
+.todo-list {
+  margin-bottom: 60px;
+}
+
+.add-todo-line {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}

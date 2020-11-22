@@ -1,0 +1,28 @@
+.Colors {
+  display: flex;
+  padding: 20px;
+}
+
+.ColorSquareWrapper {
+  display: grid;
+  padding: 5px;
+  justify-items: center;
+  align-items: center;
+}
+
+.ColorSquare {
+  border: black 2px solid;
+  height: 40px;
+  cursor: pointer;
+  width: 40px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.ColorSquareSelected:after {
+  font: normal normal normal 14px/1 FontAwesome;
+  content: "\f00c";
+  position: absolute;
+  right: 35%;
+  top: 35%;
+}
