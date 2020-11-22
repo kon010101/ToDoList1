@@ -8,6 +8,8 @@ import AddToDoLine from "./AddToDoLine";
 function ToDoList({ backColor, headline, todoLists, setTodoLists, todoList }) {
   //states
   const [todos, setTodos] = useState([]);
+  const [changeHeadline, setChangeHeadline] = useState(false);
+  const [inputText, setInputText] = useState("");
 
   const addToDo = (newTodo) => {
     const newTodos = [...todos, newTodo];
@@ -33,15 +35,45 @@ function ToDoList({ backColor, headline, todoLists, setTodoLists, todoList }) {
   function handleRemove() {
     //search for current key in item and remove it from todos
     setTodoLists(todoLists.filter((el) => el.key !== todoList.key));
-    console.log(todos);
   }
+
+  function handleDoubleClick() {
+    setChangeHeadline(true);
+    setInputText(todoList.headline);
+    // console.log(todoLists);
+
+    // todoList.headline = "a new headlone";
+    // setTodoLists([...todoLists]);
+    // console.log(todoLists);
+    // setChangeHeadline(false);
+  }
+
+  const handleInputText = ({ keyCode, target }) => {
+    setInputText(target.value); //just add if not empty or whitespace
+    if (keyCode === 13) {
+      if (inputText.trim()) todoList.headline = inputText;
+      setChangeHeadline(false);
+    }
+  };
 
   return (
     <div className="todo-list-container" style={{ backgroundColor: backColor }}>
       <div className="close" onClick={handleRemove}>
         X
       </div>
-      <h1>{headline}</h1>
+      {!changeHeadline ? (
+        <h1 className="headline" onDoubleClick={handleDoubleClick}>
+          {todoList.headline}
+        </h1>
+      ) : (
+        <input
+          className="input-headline"
+          autoFocus
+          value={inputText}
+          onKeyDown={handleInputText}
+          onChange={handleInputText}
+        ></input>
+      )}
       <ul className="todo-list">{getTodos()}</ul>
       <AddToDoLine
         className="add-todo-line"

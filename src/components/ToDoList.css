@@ -1,7 +1,7 @@
 .todo-list-container {
   border: indianred 2px solid;
-  min-width: 200px;
-  min-height: 200px;
+  min-width: 400px;
+  min-height: 400px;
   /* height: 20vw; */
   width: 20vw;
   padding: 10px 20px;
@@ -29,4 +29,11 @@
   position: absolute;
   bottom: 20px;
   right: 20px;
+}
+
+.headline {
+  cursor: pointer;
+}
+
+.input-headline {
 }
