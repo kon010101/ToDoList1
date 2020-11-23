@@ -5,16 +5,19 @@ import React, { useState } from "react";
 import ToDoItem from "./ToDoItem";
 import AddToDoLine from "./AddToDoLine";
 
-function ToDoList({ backColor, headline, todoLists, setTodoLists, todoList }) {
+function ToDoList({
+  backColor,
+  headline,
+  todoLists,
+  setTodoLists,
+  todoList,
+  allTodos,
+  setAllTodos,
+}) {
   //states
-  const [todos, setTodos] = useState([]);
   const [changeHeadline, setChangeHeadline] = useState(false);
   const [inputText, setInputText] = useState("");
-
-  const addToDo = (newTodo) => {
-    const newTodos = [...todos, newTodo];
-    setTodos(newTodos);
-  };
+  const [todos, setTodos] = useState([]);
 
   const getTodos = () => {
     const toDoItems = todos.map((item, index) => {
@@ -26,6 +29,7 @@ function ToDoList({ backColor, headline, todoLists, setTodoLists, todoList }) {
           todos={todos}
           todo={item}
           setTodos={setTodos}
+          listColor={backColor}
         />
       );
     });
@@ -79,6 +83,9 @@ function ToDoList({ backColor, headline, todoLists, setTodoLists, todoList }) {
         className="add-todo-line"
         todos={todos}
         setTodos={setTodos}
+        listColor={backColor}
+        allTodos={allTodos}
+        setAllTodos={setAllTodos}
       />
     </div>
   );

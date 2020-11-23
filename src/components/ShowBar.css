@@ -1,5 +1,18 @@
 .showbar {
-  background-color: lightsalmon;
-  width: 90%;
+  background-color: rgb(223, 219, 217);
+  position: relative;
+  min-width: 90%;
   height: 300px;
+}
+
+.showbar h1 {
+  text-align: center;
+}
+
+.todo-all-item {
+  position: absolute;
+  font-size: 2em;
+  color: black;
+  border-radius: 50%;
+  padding: 0.2em;
 }

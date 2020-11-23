@@ -8,6 +8,7 @@ import ShowBar from "./ShowBar";
 
 function Panel() {
   const [todoLists, setTodoLists] = useState([]);
+  const [allTodos, setAllTodos] = useState([]);
 
   return (
     <>
@@ -21,12 +22,14 @@ function Panel() {
               setTodoLists={setTodoLists}
               key={item.key}
               todoList={item}
+              allTodos={allTodos}
+              setAllTodos={setAllTodos}
             />
           );
         })}
         <AddList todoLists={todoLists} setTodoLists={setTodoLists} />
       </div>
-      <ShowBar />
+      <ShowBar allTodos={allTodos} />
     </>
   );
 }
