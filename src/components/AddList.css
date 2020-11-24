@@ -10,8 +10,23 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  box-shadow: 2px 4px 10px 0 rgba(0, 0, 0, 0.10),
+              2px 6px 10px 0 rgba(0, 0, 0, 0.31);
 }
+
+.add-list:hover {
+  background-color: #fff;
+  transition: 0.3s;
+  font-size: 23px;
+}
+
+.add-list:nth-child(0) {
+  transform: rotate(180deg);
+}
+
 
 .plus {
   font-size: 2em;
 }
+
+
