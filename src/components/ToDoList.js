@@ -23,6 +23,7 @@ function ToDoList({
     const toDoItems = todos.map((item, index) => {
       return (
         <ToDoItem
+          todoClassName={item.finished ? "todo-item-finished" : "todo-item"}
           text={item.text}
           key={item.key}
           finished={item.finished}

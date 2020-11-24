@@ -15,19 +15,23 @@ function ShowBar({ allTodos }) {
   return (
     <div className="showbar">
       <h1>Done</h1>
-      {allTodos.map((item) => (
-        <span
-          className="todo-all-item"
-          style={{
-            backgroundColor: item.listColor,
-            left: getRandomPosition(),
-            top: getRandomPosition(),
-            opacity: getRandomOpacity(),
-          }}
-        >
-          {item.text}
-        </span>
-      ))}
+      {allTodos.map((item) => {
+        if (item.finished) {
+          return (
+            <span
+              className="todo-all-item"
+              style={{
+                backgroundColor: item.listColor,
+                left: getRandomPosition(),
+                top: getRandomPosition(),
+                opacity: getRandomOpacity(),
+              }}
+            >
+              {item.text}
+            </span>
+          );
+        }
+      })}
     </div>
   );
 }
