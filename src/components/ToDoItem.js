@@ -14,7 +14,10 @@ function ToDoItem({ text, todos, setTodos, todo }) {
       <div className="todo-item">{text}</div>
       <div className="buttons">
         <button>Check</button>
-        <button onClick={handleRemove}>----</button>
+        <button className="fas trash-btn" onClick={handleRemove}>
+          <i className="fas fa-trash"></i>
+        </button>
+            <i className="fas fa-trash"></i>
       </div>
     </div>
   );
