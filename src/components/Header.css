@@ -442,7 +442,7 @@ img {
     100% {
         opacity: 1;
         transform: rotate(-750deg); 
-        left: -190px;
+        left: -150px;
     }
 }
 
