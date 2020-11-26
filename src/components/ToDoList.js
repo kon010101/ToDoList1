@@ -21,6 +21,8 @@ function ToDoList({
   const [todos, setTodos] = useState([]);
 
   const getTodos = () => {
+    //sort todos
+    todos.sort(function(a,b){return b.prio - a.prio});
     const toDoItems = todos.map((item, index) => {
       return (
         <ToDoItem
@@ -32,6 +34,7 @@ function ToDoList({
           todo={item}
           setTodos={setTodos}
           listColor={backColor}
+          prio={item.prio}
         />
       );
     });

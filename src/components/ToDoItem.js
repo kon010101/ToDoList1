@@ -2,7 +2,7 @@ import React from "react";
 import "./ToDoItem.css";
 import { FaTrashAlt, FaCheck, FaStar } from "react-icons/fa";
 
-function ToDoItem({ text, todos, setTodos, todo, todoClassName }) {
+function ToDoItem({ text, todos, setTodos, todo, todoClassName, prio }) {
   function handleRemove() {
     //search for current key in item and remove it from todos
     setTodos(todos.filter((el) => el.key !== todo.key));
@@ -19,11 +19,29 @@ function ToDoItem({ text, todos, setTodos, todo, todoClassName }) {
     );
   }
 
+  function handlePrio() {
+    if (prio) {
+      return "star-active";
+    }
+    if (!prio) {
+      return "star";
+    } else return "star";
+  }
+
+  function starClickHandler() {
+    setTodos(
+      todos.map((el) => {
+        if (el.key === todo.key) el.prio = !el.prio;
+        return el;
+      })
+    );
+  }
+
   return (
     <div className="item-container">
       <div className={`todo-item-text-std ${todoClassName}`}>{text}</div>
       <div className="buttons">
-        <span className="star">
+        <span className={handlePrio()} onClick={starClickHandler}>
           <FaStar />
         </span>
         <button className="complete-btn" onClick={handleCheck}>
