@@ -1,6 +1,6 @@
 import React from "react";
 import "./ShowBar.css";
-import trash from '../img/trash.png';
+import trash from "../img/trash.png";
 
 function ShowBar({ allTodos }) {
   function getRandomPosition() {
@@ -11,12 +11,10 @@ function ShowBar({ allTodos }) {
     return `${Math.random() + 0.1}`;
   }
 
-  //layer 1 good spaceing?
-
   return (
     <div className="showbar">
       <h1>Done</h1>
-      <img className="trash" src={trash} alt=""/>
+      <img className="trash" src={trash} alt="" />
       {allTodos.map((item) => {
         if (item.finished) {
           return (

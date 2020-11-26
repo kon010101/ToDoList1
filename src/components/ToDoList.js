@@ -1,5 +1,6 @@
 import "./ToDoList.css";
 import React, { useState } from "react";
+import { RiCloseLine } from "react-icons/ri";
 
 //import components
 import ToDoItem from "./ToDoItem";
@@ -64,7 +65,7 @@ function ToDoList({
   return (
     <div className="todo-list-container" style={{ backgroundColor: backColor }}>
       <div className="close" onClick={handleRemove}>
-        X
+        <RiCloseLine />
       </div>
       {!changeHeadline ? (
         <h1 className="headline" onDoubleClick={handleDoubleClick}>

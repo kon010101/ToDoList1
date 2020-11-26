@@ -1,28 +1,29 @@
 const colorsDefault = [
   {
-    id: "#F6A7DC",
-    isSelected: true
+    id: "#dea53f",
+    isSelected: false,
   },
   {
-    id: "#F7F25D",
-    isSelected: false
+    id: "#c03c32",
+    isSelected: true,
   },
   {
-    id: "#90F9E8",
-    isSelected: false
+    id: "#c86a34",
+    isSelected: false,
+  },
+
+  {
+    id: "#e6d0a6",
+    isSelected: false,
   },
   {
-    id: "#9DE295",
-    isSelected: false
+    id: "#2d5c71",
+    isSelected: false,
   },
   {
-    id: "#F6B672",
-    isSelected: false
+    id: "#62aba7",
+    isSelected: false,
   },
-  {
-    id: "#DFABF2",
-    isSelected: false
-  }
 ];
 
 export { colorsDefault };

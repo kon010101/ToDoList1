@@ -11,8 +11,8 @@ function Panel() {
   const [allTodos, setAllTodos] = useState([]);
 
   return (
-    <>
-      <div className="panel">
+    <div className="panel">
+      <div className="panel-todo-cards">
         {todoLists.map((item, index) => {
           return (
             <ToDoList
@@ -29,8 +29,7 @@ function Panel() {
         })}
         <AddList todoLists={todoLists} setTodoLists={setTodoLists} />
       </div>
-      <ShowBar allTodos={allTodos} />
-    </>
+    </div>
   );
 }
 

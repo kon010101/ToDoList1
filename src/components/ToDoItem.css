@@ -1,6 +1,12 @@
 .item-container {
+  /* background-color: grey; */
+  margin-bottom: 2px;
   display: flex;
   justify-content: space-between;
+}
+
+.todo-item-text-std {
+  padding: 5px 10px;
 }
 
 .trash-btn,
@@ -13,18 +19,44 @@
 }
 
 .trash-btn {
-  background: #ff6f47;
+  background: transparent;
+  font-size: 0.9em;
 }
 
 .complete-btn {
-  background: #32c92a;
+  background: transparent;
+  color: green;
 }
 
 .star {
+  background: transparent;
+  color: white;
+  border: none;
+  padding: 0.5em 0.6em;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.star:active {
   background: transparent;
   color: yellow;
   border: none;
   padding: 0.5em 0.6em;
   cursor: pointer;
   font-size: 1rem;
+}
+
+.todo-item {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.todo-item-finished {
+  text-decoration: line-through;
+  padding: 5px 10px;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  opacity: 0.5;
 }

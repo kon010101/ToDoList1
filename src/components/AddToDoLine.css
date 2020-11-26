@@ -1,7 +1,16 @@
 .btn-add-todo {
-  background: transparent;
+  background-image: linear-gradient(120deg, #2d5c71 0%, #62aba7 100%);
+  border: 2px black solid;
+  box-shadow: 4px 4px 4px;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   cursor: pointer;
+}
+
+.btn-add-todo-plus-symbol {
+  font-size: 1.4em;
+  width: 20px;
+  height: 20px;
+  color: black;
 }

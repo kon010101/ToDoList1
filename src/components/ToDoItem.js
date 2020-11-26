@@ -21,11 +21,11 @@ function ToDoItem({ text, todos, setTodos, todo, todoClassName }) {
 
   return (
     <div className="item-container">
-      <span className="star">
-        <FaStar />
-      </span>
-      <div className={todoClassName}>{text}</div>
+      <div className={`todo-item-text-std ${todoClassName}`}>{text}</div>
       <div className="buttons">
+        <span className="star">
+          <FaStar />
+        </span>
         <button className="complete-btn" onClick={handleCheck}>
           {!todo.finished ? <FaCheck /> : <span>DONE</span>}
         </button>

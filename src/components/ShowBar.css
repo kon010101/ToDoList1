@@ -1,7 +1,7 @@
 .showbar {
   background-color: rgb(223, 219, 217);
   position: relative;
-  min-width: 90%;
+  width: 20%;
   height: 300px;
 }
 
@@ -17,7 +17,6 @@
   padding: 0.2em;
 }
 
-
 .trash {
   position: relative;
   opacity: 1;
@@ -27,39 +26,38 @@
   animation: trash 1s linear forwards, none;
 }
 
-
 @keyframes trash {
-  0%{
+  0% {
     transform: rotate(0deg);
   }
-  10%{
+  10% {
     transform: rotate(-20deg);
   }
-  20%{
+  20% {
     transform: rotate(20deg);
   }
-  30%{
+  30% {
     transform: rotate(-20deg);
   }
-  40%{
+  40% {
     transform: rotate(20deg);
   }
-  50%{
+  50% {
     transform: rotate(-20deg);
   }
-  60%{
+  60% {
     transform: rotate(20deg);
   }
-  70%{
+  70% {
     transform: rotate(-20deg);
   }
-  80%{
+  80% {
     transform: rotate(20deg);
   }
-  90%{
+  90% {
     transform: rotate(-20deg);
   }
-  100%{
+  100% {
     transform: rotate(0deg);
   }
 }

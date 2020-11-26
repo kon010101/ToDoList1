@@ -11,7 +11,7 @@ function Colors({ items, action }) {
             className={`${styles.ColorSquare}`}
             style={{ backgroundColor: color.id }}
             onClick={() => action(color.id)}
-          > <span className={styles.ColorSquareSelected}><AiOutlineCheck /></span></span>
+      > <span className={styles.ColorSquareSelected}>{color.isSelected ? <AiOutlineCheck /> : ''}</span></span>
         </span>
       ))}
     </div>
