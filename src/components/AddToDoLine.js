@@ -20,6 +20,7 @@ function AddToDoLine({ todos, setTodos, listColor, setAllTodos, allTodos }) {
           finished: false,
           key: uniquid(),
           listColor: listColor,
+          prio: false,
         };
 
         setTodos([...todos, newTodoObject]);

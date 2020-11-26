@@ -34,16 +34,16 @@
   border: none;
   padding: 0.5em 0.6em;
   cursor: pointer;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
-.star:active {
+.star-active {
   background: transparent;
   color: yellow;
   border: none;
   padding: 0.5em 0.6em;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 .todo-item {
