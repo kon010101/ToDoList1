@@ -6,4 +6,7 @@
   min-height: 400px;
   width: 20vw;
   margin: 10px;
+  box-shadow: 2px 4px 10px 0 rgba(0, 0, 0, 0.10),
+              2px 6px 10px 0 rgba(0, 0, 0, 0.31);
 }
+

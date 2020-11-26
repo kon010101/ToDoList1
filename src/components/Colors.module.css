@@ -11,11 +11,19 @@
 }
 
 .ColorSquare {
+  border: rgb(17, 17, 17) 3px solid;
   height: 40px;
   cursor: pointer;
   width: 40px;
   border-radius: 50%;
   position: relative;
+}
+
+.ColorSquare:hover {
+  border: rgb(255, 255, 255) 1px solid;
+  color: aliceblue;
+  border-radius: 10px;
+  transition: 0.7s;
 }
 
 .ColorSquareSelected:after {
