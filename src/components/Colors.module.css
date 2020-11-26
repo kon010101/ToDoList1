@@ -1,6 +1,6 @@
 .Colors {
   display: flex;
-  padding: 20px;
+  padding: 10px;
 }
 
 .ColorSquareWrapper {
@@ -11,7 +11,7 @@
 }
 
 .ColorSquare {
-  border: rgb(17, 17, 17) 3px solid;
+  border: rgb(17, 17, 17) 2px solid;
   height: 40px;
   cursor: pointer;
   width: 40px;
@@ -19,17 +19,18 @@
   position: relative;
 }
 
+/*
 .ColorSquare:hover {
   border: rgb(255, 255, 255) 1px solid;
   color: aliceblue;
   border-radius: 10px;
   transition: 0.7s;
 }
+*/
 
 .ColorSquareSelected:after {
-  font: normal normal normal 14px/1 FontAwesome;
-  content: "\f00c";
   position: absolute;
+  background-color: blue;
   right: 35%;
   top: 35%;
 }

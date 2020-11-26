@@ -45,20 +45,22 @@ function AddListForm({ setTodoLists, todoLists, setShowListForm }) {
       className="form-container"
       style={{ backgroundColor: getSelectedColor() }}
     >
-      <h1>Create Todo List</h1>
-      <label>Title</label>
+      <h1 className='list-form-h1'>Create Todo List</h1>
       <input
         autoFocus
-        className="headline"
+        className="list-form-input"
         placeholder="name of list"
         onChange={handleHeadlineInput}
       ></input>
-      <h2>Color</h2>
+      <div className='color-items-box'>
       <Colors items={colors} action={selectColor} />
+      </div>
+      <div className='listform-buttons'>
       <button type="submit" onClick={handleSubmit}>
         Done
       </button>
       <button onClick={handleCancel}>Cancel</button>
+    </div>
     </div>
   );
 }

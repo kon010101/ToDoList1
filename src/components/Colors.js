@@ -1,5 +1,5 @@
 import React from "react";
-
+import { AiOutlineCheck } from "react-icons/ai";
 import styles from "./Colors.module.css";
 
 function Colors({ items, action }) {
@@ -8,12 +8,10 @@ function Colors({ items, action }) {
       {items.map(color => (
         <span className={styles.ColorSquareWrapper} key={color.id}>
           <span
-            className={`${styles.ColorSquare} ${
-              color.isSelected ? styles.ColorSquareSelected : ""
-            }`}
+            className={`${styles.ColorSquare}`}
             style={{ backgroundColor: color.id }}
             onClick={() => action(color.id)}
-          />
+          > <span className={styles.ColorSquareSelected}><AiOutlineCheck /></span></span>
         </span>
       ))}
     </div>
