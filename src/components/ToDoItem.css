@@ -5,9 +5,11 @@
   justify-content: space-between;
 }
 
+
 .todo-item-text-std {
   padding: 5px 10px;
 }
+
 
 .trash-btn,
 .complete-btn {
@@ -18,15 +20,31 @@
   font-size: 1rem;
 }
 
+
+.complete-btn:hover {
+  transform: rotate(-360deg);
+  transition: 0.4s;
+}
+
+
+.trash-btn:hover {
+  color: rgb(255, 0, 0);
+  transform: rotate(-15deg);
+  transition: 0.3s;
+}
+
+
 .trash-btn {
   background: transparent;
   font-size: 0.9em;
 }
 
+
 .complete-btn {
   background: transparent;
-  color: green;
+  color: rgb(5, 202, 5);
 }
+
 
 .star {
   background: transparent;
@@ -37,14 +55,16 @@
   font-size: 1rem;
 }
 
+
 .star-active {
   background: transparent;
-  color: yellow;
+  color: rgb(250, 250, 17);
   border: none;
   padding: 0.5em 0.6em;
   cursor: pointer;
   font-size: 1.1rem;
 }
+
 
 .todo-item {
   font-family: "Playfair Display", serif;
@@ -59,4 +79,5 @@
   font-weight: 400;
   font-size: 1.2rem;
   opacity: 0.5;
+  border-radius: 5px;
 }
