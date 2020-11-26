@@ -28,9 +28,8 @@
 }
 */
 
-.ColorSquareSelected:after {
+.ColorSquareSelected {
   position: absolute;
-  background-color: blue;
-  right: 35%;
-  top: 35%;
+  right: 30%;
+  top: 30%;
 }

@@ -10,21 +10,19 @@
   min-height: 400px;
   width: 20vw;
   margin: 10px;
-  box-shadow: 2px 4px 10px 0 rgba(0, 0, 0, 0.10),
-              2px 6px 10px 0 rgba(0, 0, 0, 0.31);
+  box-shadow: 2px 4px 10px 0 rgba(0, 0, 0, 0.1),
+    2px 6px 10px 0 rgba(0, 0, 0, 0.31);
 }
 
 .list-form-h1 {
   text-align: center;
   margin-bottom: 40px;
   padding-bottom: 5px;
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-weight: 600;
   letter-spacing: 1px;
   color: #111;
 }
-
-
 
 .list-form-input {
   width: 60%;
@@ -34,9 +32,8 @@
   border: 1px solid #fff;
   border-radius: 5px;
   margin-bottom: 50px;
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
 }
-
 
 .list-form-input:hover {
   border: 1px solid rgb(50, 196, 188);
@@ -47,19 +44,15 @@
 
 .listform-buttons {
   display: flex;
-  
 }
 
 .listform-buttons button {
   padding: 5px 10px;
-  margin: 20px 5px 0 0; 
+  margin: 20px 5px 0 0;
   border-radius: 4px;
-  color:  rgb(230, 227, 227);
-  background-color: rgb(48, 184, 238);
-  border: 1px solid #fff;
-  font-family: 'Playfair Display', serif;
+  color: #e6d0a6;
+  background-color: #448e90;
+  border: 1px solid #e6d0a6;
+  font-family: "Playfair Display", serif;
   font-weight: 600;
 }
-
-
-

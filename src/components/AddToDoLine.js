@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import uniquid from "uniqid";
+import { GoPlus } from "react-icons/go";
 
 import "./AddToDoLine.css";
 
@@ -61,15 +62,17 @@ function AddToDoLine({ todos, setTodos, listColor, setAllTodos, allTodos }) {
             onChange={handleInputText}
             onKeyDown={handleInputText}
           ></input>
-          <button onClick={handleClickAdd}>add</button>
-          <button onClick={() => setShowForm(false)}>X</button>
+          <div className="add-todo-line-btns">
+            <button onClick={handleClickAdd}>add</button>
+            <button onClick={() => setShowForm(false)}>X</button>
+          </div>
         </>
       ) : (
         ""
       )}
       {!showForm ? (
         <button className="btn-add-todo" onClick={handleClickForm}>
-          plus
+          <GoPlus className="btn-add-todo-plus-symbol" />
         </button>
       ) : (
         ""

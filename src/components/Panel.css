@@ -1,6 +1,12 @@
 .panel {
-  background-color: lightgreen;
-  width: 90vw;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.panel-todo-cards {
+  background-color: transparent;
+  width: 70vw;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;

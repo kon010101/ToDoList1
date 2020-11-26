@@ -6,7 +6,7 @@ function Sidebar() {
 
     return (
         <div className="sidebar">
-            Hello
+            Sidebar
         </div>
     );
 }
