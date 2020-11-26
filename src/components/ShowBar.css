@@ -16,3 +16,50 @@
   border-radius: 50%;
   padding: 0.2em;
 }
+
+
+.trash {
+  position: relative;
+  opacity: 1;
+  width: 70px;
+  height: 70px;
+  background-color: rgba(17, 17, 17, 0);
+  animation: trash 1s linear forwards, none;
+}
+
+
+@keyframes trash {
+  0%{
+    transform: rotate(0deg);
+  }
+  10%{
+    transform: rotate(-20deg);
+  }
+  20%{
+    transform: rotate(20deg);
+  }
+  30%{
+    transform: rotate(-20deg);
+  }
+  40%{
+    transform: rotate(20deg);
+  }
+  50%{
+    transform: rotate(-20deg);
+  }
+  60%{
+    transform: rotate(20deg);
+  }
+  70%{
+    transform: rotate(-20deg);
+  }
+  80%{
+    transform: rotate(20deg);
+  }
+  90%{
+    transform: rotate(-20deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+}
