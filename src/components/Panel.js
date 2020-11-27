@@ -6,9 +6,8 @@ import ToDoList from "./ToDoList";
 import AddList from "./AddList";
 import ShowBar from "./ShowBar";
 
-function Panel() {
+function Panel({ allTodos, setAllTodos, doneItems, setDoneItems }) {
   const [todoLists, setTodoLists] = useState([]);
-  const [allTodos, setAllTodos] = useState([]);
 
   return (
     <div className="panel">

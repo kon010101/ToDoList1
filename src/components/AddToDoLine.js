@@ -64,8 +64,15 @@ function AddToDoLine({ todos, setTodos, listColor, setAllTodos, allTodos }) {
             onKeyDown={handleInputText}
           ></input>
           <div className="add-todo-line-btns">
-            <button className="add-todo-line-btns-1" onClick={handleClickAdd}>add</button>
-            <button className="add-todo-line-btns-2" onClick={() => setShowForm(false)}>X</button>
+            <button className="add-todo-line-btns-1" onClick={handleClickAdd}>
+              add
+            </button>
+            <button
+              className="add-todo-line-btns-2"
+              onClick={() => setShowForm(false)}
+            >
+              X
+            </button>
           </div>
         </>
       ) : (

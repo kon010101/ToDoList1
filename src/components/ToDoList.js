@@ -22,7 +22,9 @@ function ToDoList({
 
   const getTodos = () => {
     //sort todos
-    todos.sort(function(a,b){return b.prio - a.prio});
+    todos.sort(function (a, b) {
+      return b.prio - a.prio;
+    });
     const toDoItems = todos.map((item, index) => {
       return (
         <ToDoItem
@@ -35,6 +37,8 @@ function ToDoList({
           setTodos={setTodos}
           listColor={backColor}
           prio={item.prio}
+          allTodos={allTodos}
+          setAllTodos={setAllTodos}
         />
       );
     });

@@ -2,21 +2,40 @@ import React from "react";
 import "./ToDoItem.css";
 import { FaTrashAlt, FaCheck, FaStar } from "react-icons/fa";
 
-function ToDoItem({ text, todos, setTodos, todo, todoClassName, prio }) {
+function ToDoItem({
+  text,
+  todos,
+  setTodos,
+  todo,
+  todoClassName,
+  prio,
+  allTodos,
+  setAllTodos,
+}) {
   function handleRemove() {
     //search for current key in item and remove it from todos
     setTodos(todos.filter((el) => el.key !== todo.key));
-    console.log(todos);
+    setAllTodos(allTodos.filter((el) => el.key !== todo.key));
   }
 
   function handleCheck() {
     //get current todo and change finished to true
-    setTodos(
-      todos.map((el) => {
-        if (el.key === todo.key) el.finished = !el.finished;
-        return el;
-      })
-    );
+    const updatedTodos = todos.map((el) => ({
+      ...el,
+      finished: el.key === todo.key ? !el.finished : el.finished,
+    }));
+    setTodos(updatedTodos);
+
+    //set Timeout
+    setTimeout(function () {
+      setTodos(todos.filter((el) => el.key !== todo.key));
+      setAllTodos(
+        allTodos.map((el) => ({
+          ...el,
+          finished: el.key === todo.key ? !el.finished : el.finished,
+        }))
+      );
+    }, 3000);
   }
 
   function handlePrio() {
