@@ -40,6 +40,17 @@ function AddListForm({ setTodoLists, todoLists, setShowListForm }) {
     setShowListForm(false);
   }
 
+  function handleOnKey(e) {
+      if (e.keyCode === 13) {
+        const uniqid = require("uniqid");
+        setTodoLists([
+          ...todoLists,
+          { color: getSelectedColor(), headline: headlineInput, key: uniqid() },
+        ]);
+        setShowListForm(false);
+      }
+  }
+
   return (
     <div
       className="form-container"
@@ -51,6 +62,7 @@ function AddListForm({ setTodoLists, todoLists, setShowListForm }) {
         className="list-form-input"
         placeholder="name of list"
         onChange={handleHeadlineInput}
+        onKeyDown={handleOnKey}
       ></input>
       <div className='color-items-box'>
       <Colors items={colors} action={selectColor} />
