@@ -1,5 +1,6 @@
 .todo-list-container {
-  border: indianred 2px solid;
+  border: rgba(0, 0, 0, 0) 1px solid;
+  border-radius: 5px;
   min-width: 400px;
   min-height: 400px;
   /* height: 20vw; */
@@ -7,17 +8,31 @@
   padding: 10px 20px;
   margin: 10px;
   position: relative;
+  box-shadow: 2px 4px 10px 0 rgba(0, 0, 0, 0.10),
+              2px 6px 10px 0 rgba(0, 0, 0, 0.31);
 }
 
 .close {
   margin-top: -10px;
   position: absolute;
-  width: 30px;
-  height: 30px;
-  font-size: 1.6em;
+  width: 25px;
+  height: 25px;
+  font-size: 1.3em;
+  border: 2px solid #e6d0a6;
+  color: #e6d0a6;
+  background-color: #448e90;
+  border-radius: 5px;
   right: 5px;
   top: 15px;
   cursor: pointer;
+}
+
+.close:hover {
+  color: #448e90;
+  background-color: #d3bd94;
+  border: 2px solid #448e90;
+  transition: 0.3s;
+  transform: scale(1.1);
 }
 
 .todo-list {
@@ -39,5 +54,24 @@
   font-size: 1.8rem;
 }
 
+
 .input-headline {
+  background-color: #fff;
+  border: 2px solid #e6d0a6;
+  border-radius: 5px;
+  padding: 6px;
+  margin-bottom: px;
+  font-size: 1em;
+  font-family: "Playfair Display", serif;
+  color: rgba(17, 17, 17, 0.781);
 }
+
+
+.input-headline:hover {
+  cursor: pointer;
+  border: 2px solid #d1bb92;
+  background-color: rgb(241, 235, 235);
+  transition: 0.3s;
+}
+
+

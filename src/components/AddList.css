@@ -1,7 +1,7 @@
 .add-list {
-  border: rgb(173, 167, 167) 4px solid;
+  border:  rgb(223, 221, 221) 4px solid;
   border-radius: 5px;
-  background-color: lightgray;
+  background-color: rgb(223, 221, 221);
   opacity: 0.5;
   min-width: 400px;
   min-height: 400px;
