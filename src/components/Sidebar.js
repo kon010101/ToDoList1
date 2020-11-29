@@ -5,7 +5,7 @@ import "./Sidebar.css";
 //items finished
 //text color = listcolor
 
-function Sidebar({ allTodos }) {
+function Sidebar({ allTodos, setAllTodos }) {
   function renderDoneItems() {
     //get all items which are done
     const doneItems = allTodos.filter((el) => el.finished);
@@ -13,7 +13,7 @@ function Sidebar({ allTodos }) {
     doneItems.sort(function (a, b) {
       return b.time - a.time;
     });
-    console.log(`Done: ${doneItems}`);
+    //render first 10 elements, remove older ones
     const renderItems = doneItems.map((item, index) => {
       if (index < 10) {
         return (
@@ -26,9 +26,11 @@ function Sidebar({ allTodos }) {
             {item.text}
           </li>
         );
+      } else if (index > 9) {
+        //delete outdated items from array
+        setAllTodos(allTodos.filter((el) => el !== item));
       }
     });
-    console.log(doneItems);
     return renderItems;
   }
 

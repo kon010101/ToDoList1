@@ -27,16 +27,8 @@ function AddListForm({ setTodoLists, todoLists, setShowListForm }) {
 
     setTodoLists([
       ...todoLists,
-      { color: getSelectedColor(), headline: headlineInput, key: uniqid() },
+      { color: getSelectedColor(), headline: headlineInput, key: uniqid(), todos: [] },
     ]);
-    setShowListForm(false);
-  }
-
-  function handleHeadlineInput(e) {
-    setHeadlineInput(e.target.value);
-  }
-
-  function handleCancel() {
     setShowListForm(false);
   }
 
@@ -45,10 +37,18 @@ function AddListForm({ setTodoLists, todoLists, setShowListForm }) {
         const uniqid = require("uniqid");
         setTodoLists([
           ...todoLists,
-          { color: getSelectedColor(), headline: headlineInput, key: uniqid() },
+          { color: getSelectedColor(), headline: headlineInput, key: uniqid(), todos: [] },
         ]);
         setShowListForm(false);
       }
+  }
+
+    function handleHeadlineInput(e) {
+    setHeadlineInput(e.target.value);
+  }
+
+  function handleCancel() {
+    setShowListForm(false);
   }
 
   return (

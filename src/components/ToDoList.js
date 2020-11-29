@@ -18,7 +18,7 @@ function ToDoList({
   //states
   const [changeHeadline, setChangeHeadline] = useState(false);
   const [inputText, setInputText] = useState("");
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState(todoList.todos);
 
   const getTodos = () => {
     //sort todos nad put Important ones on top

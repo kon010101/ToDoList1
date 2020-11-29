@@ -29,7 +29,6 @@ function AddToDoLine({ todos, setTodos, listColor, setAllTodos, allTodos }) {
       }
       setInputText("");
     }
-    console.log(todos);
   };
 
   const handleClickAdd = () => {

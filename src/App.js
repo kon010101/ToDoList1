@@ -14,7 +14,7 @@ function App() {
       <div className="main-container">
         <Header />
         <div className="main-container-sp">
-          <Sidebar allTodos={allTodos} />
+          <Sidebar allTodos={allTodos} setAllTodos={setAllTodos}/>
           <Panel allTodos={allTodos} setAllTodos={setAllTodos} />
         </div>
       </div>
