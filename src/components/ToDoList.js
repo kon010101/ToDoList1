@@ -18,10 +18,10 @@ function ToDoList({
   //states
   const [changeHeadline, setChangeHeadline] = useState(false);
   const [inputText, setInputText] = useState("");
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState(todoList.todos);
 
   const getTodos = () => {
-    //sort todos
+    //sort todos nad put Important ones on top
     todos.sort(function (a, b) {
       return b.prio - a.prio;
     });

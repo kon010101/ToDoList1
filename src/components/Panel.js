@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import "./Panel.css";
+import {todoListsDefault} from './InitialData'
 
 //import components
 import ToDoList from "./ToDoList";
 import AddList from "./AddList";
-import ShowBar from "./ShowBar";
 
 function Panel({ allTodos, setAllTodos, doneItems, setDoneItems }) {
-  const [todoLists, setTodoLists] = useState([]);
+  const [todoLists, setTodoLists] = useState(todoListsDefault);
 
   return (
     <div className="panel">
