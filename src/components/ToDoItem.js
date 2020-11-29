@@ -21,10 +21,16 @@ function ToDoItem({
 
   function handleCheck() {
     //get current todo and change finished to true
-    const updatedTodos = todos.map((el) => ({
-      ...el,
-      finished: el.key === todo.key ? !el.finished : el.finished,
-    }));
+    const updatedTodos = todos.map((el) => {
+      if (el.key === todo.key) {
+        el.finished = !el.finished;
+        console.log(el.time);
+        el.time = Date.now();
+        console.log(el.time);
+
+        return { ...el };
+      } else return el;
+    });
     setTodos(updatedTodos);
 
     //set Timeout
@@ -65,7 +71,13 @@ function ToDoItem({
           <FaStar />
         </span>
         <button className="complete-btn" onClick={handleCheck}>
-  {!todo.finished ? <FaCheck /> : <span id="close-button"><AiFillCloseCircle /></span>}
+          {!todo.finished ? (
+            <FaCheck />
+          ) : (
+            <span id="close-button">
+              <AiFillCloseCircle />
+            </span>
+          )}
         </button>
         <button className="trash-btn" onClick={handleRemove}>
           <FaTrashAlt />

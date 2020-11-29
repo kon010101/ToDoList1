@@ -7,18 +7,26 @@ import "./Sidebar.css";
 
 function Sidebar({ allTodos }) {
   function renderDoneItems() {
+    //get all items which are done
     const doneItems = allTodos.filter((el) => el.finished);
-    const renderItems = doneItems.map((item) => {
-      return (
-        <li
-          className="todo-finished-item"
-          style={{
-            color: item.listColor,
-          }}
-        >
-          {item.text}
-        </li>
-      );
+    //sort them in order of timestemp
+    doneItems.sort(function (a, b) {
+      return b.time - a.time;
+    });
+    console.log(`Done: ${doneItems}`);
+    const renderItems = doneItems.map((item, index) => {
+      if (index < 10) {
+        return (
+          <li
+            className="todo-finished-item"
+            style={{
+              color: item.listColor,
+            }}
+          >
+            {item.text}
+          </li>
+        );
+      }
     });
     console.log(doneItems);
     return renderItems;
@@ -26,9 +34,10 @@ function Sidebar({ allTodos }) {
 
   return (
     <div className="sidebar">
+      <h1>Important</h1>
+      <ul className="sidebar-list">Hello</ul>
       <h1>Done</h1>
       <ul className="sidebar-list">{renderDoneItems()}</ul>
-      <h1>Important Items</h1>
     </div>
   );
 }

@@ -21,7 +21,7 @@ function ToDoList({
   const [todos, setTodos] = useState([]);
 
   const getTodos = () => {
-    //sort todos
+    //sort todos nad put Important ones on top
     todos.sort(function (a, b) {
       return b.prio - a.prio;
     });
