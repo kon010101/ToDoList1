@@ -16,6 +16,7 @@
   transform: scale(1.2);
   box-shadow: 6px 7px 10px 0 rgba(0, 0, 0, 0.28),
               6px 7px 10px 0 rgba(0, 0, 0, 0.20);
+  outline: none;            
 }
 
 .btn-add-todo-plus-symbol {
@@ -23,6 +24,7 @@
   width: 15px;
   height: 15px;
   color: rgb(14, 192, 236);
+  outline: none;
 }
 
 .btn-add-todo-plus-symbol:hover {
@@ -40,6 +42,7 @@
   font-size: 1em;
   font-family: "Playfair Display", serif;
   color: rgba(17, 17, 17, 0.781);
+  outline: none;
 }
 
 .NewToDoInput:hover{
@@ -58,6 +61,7 @@
   border: 2px solid #e6d0a6;
   font-family: "Playfair Display", serif;
   font-weight: 600;
+  outline: none;
 }
 
 
@@ -79,6 +83,7 @@
   border: 2px solid #e6d0a6;
   font-family: "Playfair Display", serif;
   font-weight: 600;
+  outline: none;
 }
 
 

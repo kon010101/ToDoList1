@@ -1,6 +1,7 @@
 import React from "react";
 import "./ToDoItem.css";
 import { FaTrashAlt, FaCheck, FaStar } from "react-icons/fa";
+import { AiFillCloseCircle } from "react-icons/ai";
 
 function ToDoItem({
   text,
@@ -64,7 +65,7 @@ function ToDoItem({
           <FaStar />
         </span>
         <button className="complete-btn" onClick={handleCheck}>
-          {!todo.finished ? <FaCheck /> : <span>DONE</span>}
+  {!todo.finished ? <FaCheck /> : <span id="close-button"><AiFillCloseCircle /></span>}
         </button>
         <button className="trash-btn" onClick={handleRemove}>
           <FaTrashAlt />
