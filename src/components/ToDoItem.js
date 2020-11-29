@@ -39,6 +39,27 @@ function ToDoItem({
     }, 3000);
   }
 
+  function starClickHandler( ) {
+    
+    const updatedPrioTodos = todos.map((el) => ({
+      ...el,
+      prio: el.key === todo.key ? !el.prio : el.prio,
+    }));
+    setTodos(updatedPrioTodos);
+
+//set Timeout
+    setTimeout(function () {
+          setAllTodos(
+            allTodos.map((el) => ({
+              ...el,
+              prio: el.key === todo.key ? !el.prio : el.prio,
+            }))
+          );
+        });
+
+
+      }
+
   function handlePrio() {
     if (prio) {
       return "star-active";
@@ -48,14 +69,15 @@ function ToDoItem({
     } else return "star";
   }
 
-  function starClickHandler() {
+  /* function starClickHandler() {
     setTodos(
       todos.map((el) => {
         if (el.key === todo.key) el.prio = !el.prio;
         return el;
       })
-    );
-  }
+    ); */
+
+  /* } */
 
   return (
     <div className="item-container">
