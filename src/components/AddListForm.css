@@ -33,6 +33,7 @@
   border-radius: 5px;
   margin-bottom: 50px;
   font-family: "Playfair Display", serif;
+  outline: none;
 }
 
 .list-form-input:hover {
@@ -59,6 +60,7 @@
   border: 2px solid #e6d0a6;
   font-family: "Playfair Display", serif;
   font-weight: 600;
+  outline: none;
 }
 
 
