@@ -42,7 +42,7 @@ function ToDoItem({
     }, 1500);
   }
 
-  function handlePrio() {
+  function handlePrioStar() {
     if (prio) {
       return "star-active";
     }
@@ -62,9 +62,15 @@ function ToDoItem({
 
   return (
     <div className="item-container">
-      <div className={`todo-item-text-std ${todoClassName}`}>{text}</div>
+      <span
+        className={`${
+          !prio ? "todo-item-text-std" : "todo-item-text-prio"
+        } ${todoClassName}`}
+      >
+        {text}
+      </span>
       <div className="buttons">
-        <span className={handlePrio()} onClick={starClickHandler}>
+        <span className={handlePrioStar()} onClick={starClickHandler}>
           <FaStar />
         </span>
         <button className="complete-btn" onClick={handleCheck}>
