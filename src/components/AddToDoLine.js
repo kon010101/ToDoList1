@@ -19,6 +19,7 @@ function AddToDoLine({ todos, setTodos, listColor, setAllTodos, allTodos }) {
           text: inputText,
           finished: false,
           key: uniquid(),
+          time: Date.now(),
           listColor: listColor,
           prio: false,
         };
@@ -28,7 +29,6 @@ function AddToDoLine({ todos, setTodos, listColor, setAllTodos, allTodos }) {
       }
       setInputText("");
     }
-    console.log(todos);
   };
 
   const handleClickAdd = () => {
@@ -38,7 +38,9 @@ function AddToDoLine({ todos, setTodos, listColor, setAllTodos, allTodos }) {
         text: inputText,
         finished: false,
         key: uniquid(),
+        time: Date.now(),
         listColor: listColor,
+        prio: false,
       };
 
       setTodos([...todos, newTodoObject]);

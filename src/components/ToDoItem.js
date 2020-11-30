@@ -21,23 +21,27 @@ function ToDoItem({
 
   function handleCheck() {
     //get current todo and change finished to true
-    const updatedTodos = todos.map((el) => ({
-      ...el,
-      finished: el.key === todo.key ? !el.finished : el.finished,
-    }));
+    const updatedTodos = todos.map((el) => {
+      if (el.key === todo.key) {
+        el.finished = !el.finished;
+        el.time = Date.now();
+        return { ...el };
+      } else return el;
+    });
     setTodos(updatedTodos);
 
-    //set Timeout
+    //set Timeout - so the done item will disappear after a period of time
     setTimeout(function () {
-      setTodos(todos.filter((el) => el.key !== todo.key));
+      setTodos(todos.filter((el) => el.key !== todo.key)); //kick out current todo, cause its done
       setAllTodos(
         allTodos.map((el) => ({
           ...el,
           finished: el.key === todo.key ? !el.finished : el.finished,
         }))
       );
-    }, 3000);
+    }, 1500);
   }
+
 
   function starClickHandler( ) {
     
@@ -60,7 +64,7 @@ function ToDoItem({
 
       }
 
-  function handlePrio() {
+  function handlePrioStar() {
     if (prio) {
       return "star-active";
     }
@@ -81,13 +85,25 @@ function ToDoItem({
 
   return (
     <div className="item-container">
-      <div className={`todo-item-text-std ${todoClassName}`}>{text}</div>
+      <span
+        className={`${
+          !prio ? "todo-item-text-std" : "todo-item-text-prio"
+        } ${todoClassName}`}
+      >
+        {text}
+      </span>
       <div className="buttons">
-        <span className={handlePrio()} onClick={starClickHandler}>
+        <span className={handlePrioStar()} onClick={starClickHandler}>
           <FaStar />
         </span>
         <button className="complete-btn" onClick={handleCheck}>
-  {!todo.finished ? <FaCheck /> : <span id="close-button"><AiFillCloseCircle /></span>}
+          {!todo.finished ? (
+            <FaCheck />
+          ) : (
+            <span id="close-button">
+              <AiFillCloseCircle />
+            </span>
+          )}
         </button>
         <button className="trash-btn" onClick={handleRemove}>
           <FaTrashAlt />

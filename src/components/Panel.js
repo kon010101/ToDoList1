@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 import "./Panel.css";
+import {todoListsDefault} from './InitialData'
 
 //import components
 import ToDoList from "./ToDoList";
 import AddList from "./AddList";
-import ShowBar from "./ShowBar";
 
 function Panel({ allTodos, setAllTodos, doneItems, setDoneItems, todoLists, setTodoLists }) {
-  
-  
 
   return (
     <div className="panel">
