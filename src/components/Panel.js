@@ -6,8 +6,7 @@ import {todoListsDefault} from './InitialData'
 import ToDoList from "./ToDoList";
 import AddList from "./AddList";
 
-function Panel({ allTodos, setAllTodos, doneItems, setDoneItems }) {
-  const [todoLists, setTodoLists] = useState(todoListsDefault);
+function Panel({ allTodos, setAllTodos, doneItems, setDoneItems, todoLists, setTodoLists }) {
 
   return (
     <div className="panel">
